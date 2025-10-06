@@ -344,7 +344,7 @@ function generateTree(
         const modTime = formatModTime(stats);
         const fileType = getFileTypeDescription(item.name);
         result += ` (${size}, ${modTime}, ${fileType})\n`;
-      } catch (error) {
+      } catch {
         const fileType = getFileTypeDescription(item.name);
         result += ` (${fileType})\n`;
       }

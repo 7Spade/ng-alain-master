@@ -59,7 +59,7 @@
     │   │   │   │   ├── rtl.component.ts (705 B, 今天, Angular 組件)
     │   │   │   │   ├── search.component.ts (3.1 KB, 今天, Angular 組件)
     │   │   │   │   ├── task.component.ts (4.1 KB, 今天, Angular 組件)
-    │   │   │   │   ├── user.component.ts (2.1 KB, 今天, Angular 組件)
+    │   │   │   │   ├── user.component.ts (3.1 KB, 今天, Angular 組件)
     │   │   │   ├── basic.component.ts (5.4 KB, 今天, Angular 組件)
     │   │   │   ├── README.md (54 B, 今天, Markdown 文檔)
     │   │   ├── blank/
@@ -71,9 +71,9 @@
     │   │   ├── index.ts (129 B, 今天, TypeScript)
     │   ├── routes/
     │   │   ├── projects [Angular]/
-    │   │   │   ├── project-detail.page.ts (387 B, 今天, TypeScript)
-    │   │   │   ├── projects-list.page.ts (379 B, 今天, TypeScript)
-    │   │   │   ├── projects.routes.ts (356 B, 今天, TypeScript)
+    │   │   │   ├── project-detail.page.ts (392 B, 今天, TypeScript)
+    │   │   │   ├── projects-list.page.ts (384 B, 今天, TypeScript)
+    │   │   │   ├── projects.routes.ts (366 B, 今天, TypeScript)
     │   │   ├── dashboard/
     │   │   │   ├── analysis/
     │   │   │   │   ├── analysis.component.html (9.1 KB, 今天, Angular 組件)
@@ -155,16 +155,16 @@
     │   │   │   ├── routes.ts (450 B, 今天, TypeScript)
     │   │   ├── org/
     │   │   │   ├── members/
-    │   │   │   │   ├── members.page.ts (385 B, 今天, TypeScript)
+    │   │   │   │   ├── members.page.ts (390 B, 今天, TypeScript)
     │   │   │   ├── overview/
-    │   │   │   │   ├── overview.page.ts (388 B, 今天, TypeScript)
+    │   │   │   │   ├── overview.page.ts (393 B, 今天, TypeScript)
     │   │   │   ├── permissions/
-    │   │   │   │   ├── permissions.page.ts (421 B, 今天, TypeScript)
+    │   │   │   │   ├── permissions.page.ts (426 B, 今天, TypeScript)
     │   │   │   ├── settings/
-    │   │   │   │   ├── settings.page.ts (398 B, 今天, TypeScript)
+    │   │   │   │   ├── settings.page.ts (406 B, 今天, TypeScript)
     │   │   │   ├── teams/
-    │   │   │   │   ├── teams.page.ts (383 B, 今天, TypeScript)
-    │   │   │   ├── org.routes.ts (978 B, 今天, TypeScript)
+    │   │   │   │   ├── teams.page.ts (388 B, 今天, TypeScript)
+    │   │   │   ├── org.routes.ts (1006 B, 今天, TypeScript)
     │   │   │   ├── organization-shell.component.ts (282 B, 今天, Angular 組件)
     │   │   ├── passport/
     │   │   │   ├── lock/
@@ -292,13 +292,13 @@
     │   │   │   ├── routes.ts (591 B, 今天, TypeScript)
     │   │   ├── user/
     │   │   │   ├── organizations/
-    │   │   │   │   ├── organizations.page.ts (395 B, 今天, TypeScript)
+    │   │   │   │   ├── organizations.page.ts (400 B, 今天, TypeScript)
     │   │   │   ├── profile/
-    │   │   │   │   ├── profile.page.ts (385 B, 今天, TypeScript)
+    │   │   │   │   ├── profile.page.ts (390 B, 今天, TypeScript)
     │   │   │   ├── settings/
-    │   │   │   │   ├── settings.page.ts (392 B, 今天, TypeScript)
+    │   │   │   │   ├── settings.page.ts (397 B, 今天, TypeScript)
     │   │   │   ├── user-shell.component.ts (266 B, 今天, Angular 組件)
-    │   │   │   ├── user.routes.ts (758 B, 今天, TypeScript)
+    │   │   │   ├── user.routes.ts (773 B, 今天, TypeScript)
     │   │   ├── widgets/
     │   │   │   ├── widgets/
     │   │   │   │   ├── widgets.component.html (31.9 KB, 今天, Angular 組件)
@@ -425,7 +425,7 @@
     ├── plan_instructions.md (9.4 KB, 今天, Markdown 文檔)
     ├── van_instructions.md (8.9 KB, 今天, Markdown 文檔)
 └── docs/
-    ├── ng-alain-structure-2025-10-06.md (30.4 KB, 今天, Markdown 文檔)
+    ├── ng-alain-structure-2025-10-06.md (32.6 KB, 今天, Markdown 文檔)
 └── memory-bank/
     ├── DEPRECATED/
     ├── memory.json (488 B, 今天, JSON 配置)
