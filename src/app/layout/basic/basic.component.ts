@@ -19,6 +19,7 @@ import { HeaderRTLComponent } from './widgets/rtl.component';
 import { HeaderSearchComponent } from './widgets/search.component';
 import { HeaderTaskComponent } from './widgets/task.component';
 import { HeaderUserComponent } from './widgets/user.component';
+import { OrganizationSwitcherComponent } from './widgets/organization-switcher.component';
 
 @Component({
   selector: 'layout-basic',
@@ -76,19 +77,9 @@ import { HeaderUserComponent } from './widgets/user.component';
         <header-user />
       </layout-default-header-item>
       <ng-template #asideUserTpl>
-        <div nz-dropdown nzTrigger="click" [nzDropdownMenu]="userMenu" class="alain-default__aside-user">
-          <nz-avatar class="alain-default__aside-user-avatar" [nzSrc]="user.avatar" />
-          <div class="alain-default__aside-user-info">
-            <strong>{{ user.name }}</strong>
-            <p class="mb0">{{ user.email }}</p>
-          </div>
+        <div class="alain-default__aside-user organization-switcher-container">
+          <organization-switcher />
         </div>
-        <nz-dropdown-menu #userMenu="nzDropdownMenu">
-          <ul nz-menu>
-            <li nz-menu-item routerLink="/pro/account/center">{{ 'menu.account.center' | i18n }}</li>
-            <li nz-menu-item routerLink="/pro/account/settings">{{ 'menu.account.settings' | i18n }}</li>
-          </ul>
-        </nz-dropdown-menu>
       </ng-template>
       <ng-template #contentTpl>
         <router-outlet />
@@ -118,7 +109,8 @@ import { HeaderUserComponent } from './widgets/user.component';
     HeaderI18nComponent,
     HeaderClearStorageComponent,
     HeaderFullScreenComponent,
-    HeaderUserComponent
+    HeaderUserComponent,
+    OrganizationSwitcherComponent
   ]
 })
 export class LayoutBasicComponent {
