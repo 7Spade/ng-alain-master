@@ -29,15 +29,6 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
           {{ 'menu.account.trigger' | i18n }}
         </div>
         <li nz-menu-divider></li>
-        <div nz-menu-item (click)="goManageOrg()">
-          <i nz-icon nzType="team" class="mr-sm"></i>
-          管理組織
-        </div>
-        <div nz-menu-item (click)="goCreateOrg()">
-          <i nz-icon nzType="plus" class="mr-sm"></i>
-          建立組織
-        </div>
-        <li nz-menu-divider></li>
         <div nz-menu-item (click)="logout()">
           <i nz-icon nzType="logout" class="mr-sm"></i>
           {{ 'menu.account.logout' | i18n }}
@@ -54,16 +45,6 @@ export class HeaderUserComponent {
   private readonly tokenService = inject(DA_SERVICE_TOKEN);
   get user(): User {
     return this.settings.user;
-  }
-
-  goCreateOrg(): void {
-    this.router.navigateByUrl('/org/new');
-  }
-
-  goManageOrg(): void {
-    const slug = prompt('請輸入要管理的組織識別（slug）');
-    if (!slug) return;
-    this.router.navigateByUrl(`/org/${slug}/manage`);
   }
 
   logout(): void {
