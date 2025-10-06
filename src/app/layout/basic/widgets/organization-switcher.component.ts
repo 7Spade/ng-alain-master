@@ -8,8 +8,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { Organization } from '../../routes/pro/organization/models/organization.model';
-import { OrganizationService } from '../../routes/pro/organization/services/organization.service';
+import { Organization } from '../../../routes/pro/organization/models/organization.model';
+import { OrganizationService } from '../../../routes/pro/organization/services/organization.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
