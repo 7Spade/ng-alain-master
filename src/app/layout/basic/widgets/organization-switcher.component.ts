@@ -8,8 +8,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { Organization } from '../../../routes/pro/organization/models/organization.model';
-import { OrganizationService } from '../../../routes/pro/organization/services/organization.service';
+import { Organization } from '../../routes/pro/organization/models/organization.model';
+import { OrganizationService } from '../../routes/pro/organization/services/organization.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -328,11 +328,11 @@ export class OrganizationSwitcherComponent implements OnInit {
   loadOrganizations(): void {
     this.loading = true;
     this.organizationService.getOrganizations({ pageSize: 20 }).subscribe({
-      next: (result: { data: Organization[]; total: number }) => {
+      next: (result) => {
         this.organizations = result.data;
         this.loading = false;
       },
-      error: (error: any) => {
+      error: (error) => {
         console.error('載入組織列表失敗:', error);
         this.loading = false;
       }
@@ -348,10 +348,10 @@ export class OrganizationSwitcherComponent implements OnInit {
       const orgId = orgMatch[1];
       if (orgId !== 'create' && orgId !== 'list') {
         this.organizationService.getOrganization(orgId).subscribe({
-          next: (org: Organization) => {
+          next: (org) => {
             this.currentEntity = org;
           },
-          error: (error: any) => {
+          error: (error) => {
             console.error('載入組織信息失敗:', error);
             this.currentEntity = null;
           }
