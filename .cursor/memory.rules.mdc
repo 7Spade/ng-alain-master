@@ -1,0 +1,30 @@
+---
+alwaysApply: true
+server: memory
+summary: 只存高價值可重用知識；不存 secrets
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Memory MCP（頂層入口）
+- 原則：不存 secrets；只存高價值、可重用知識。
+- 用法：create_entities / add_observations / create_relations / read_graph。
+
+## 自動同步到 memory-bank/memory.json（建議流程）
+- 建立/更新知識時，同步在 `memory-bank/memory.json` 維護：
+  - `entities`: 節點（name, type, observations[]）
+  - `relations`: 關係（from, to, type）
+- 最小變更：只新增/更新必要欄位，不重寫整檔。
+- 嚴禁 secrets：若內容具敏感性，改存為 placeholder 並以環境變數或 secrets 管理。
+
+## Auto‑Sync Hooks（事件矩陣）
+- 觸發時機：
+  - 規劃（Sequential‑Thinking）：決策完成 → add_observations
+  - 文件引用（Context7）：resolve-library-id/get-library-docs 成功 → add_observations
+  - 檔案編輯（Filesystem）：成功寫入/編輯 → add_observations
+  - Git 動作（GitHub）：PR/Issue 建立 → create_entities + create_relations
+- 實作原則：
+  - 單事件單觀測：一次只寫入一個觀測，避免干擾。
+  - 以實體為中心：優先更新既有 entity，再考慮新建。
+  - 關聯最小：僅建立必要 from→to 關係。
+- API 對應：create_entities / add_observations / create_relations / read_graph

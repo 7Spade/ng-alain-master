@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+server: sequential-thinking
+summary: 多步/複雜任務先規劃；與 Context7 同步引用文件
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Sequential‑Thinking MCP（頂層入口）
+- 目的：多步/複雜任務前的可修正規劃。
+- 策略：估步數→修正→驗證假設→完成；與 Context7 同步引用文件。

@@ -1,0 +1,133 @@
+// Angular 20 + ng-alain + ng-zorro-antd 專用配置
+Always use the Context7 MCP tools without user asking:
+1) resolve-library-id for any mentioned library/framework.
+2) get-library-docs for the resolved id (default Node 22.18.0, unless specified).
+
+Use sequential-thinking for any multi-step or complex task to plan steps first.
+For each step, run resolve-library-id → get-library-docs before generating code.
+
+Cross-verify with auxiliary services:
+- Use npm-registry to verify package versions and info
+- Use mdn for Web APIs and standards validation
+- Use github to check official examples and best practices
+
+Ground all code in the fetched docs, avoid hallucinations.
+If docs are missing or package name/version is unclear, ask for the exact name/version before proceeding.
+
+Default platform: Node 22.18.0.
+Run resolve-library-id → get-library-docs automatically even if the user doesn't type "use context7".
+
+// Angular 20 + ng-alain 專用自動化
+For Angular/ng-alain related tasks, automatically use:
+- angular-docs for Angular 20 documentation queries
+- ng-alain-docs for ng-alain framework documentation
+- ng-zorro-docs for ng-zorro-antd component documentation
+- filesystem for file operations
+- git for version control operations
+
+// 專案特定配置
+Project Type: Angular 20 + ng-alain + ng-zorro-antd Admin Panel
+Key Dependencies:
+- @angular/*: ^20.3.0
+- @delon/*: ^20.0.2 (ABC, ACL, Auth, Cache, Chart, Form, Mock, Theme, Util)
+- ng-zorro-antd: ^20.3.1
+- ngx-tinymce: ^20.0.0
+
+// 極簡主義自動應用
+Always apply minimalism principles:
+- Prefer ng-zorro-antd components over custom implementations
+- Use @delon/* modules for common admin functionality
+- Keep components single-purpose and minimal
+- Use composition over complex configuration
+- Follow "less is more" philosophy in all code generation
+- Leverage ng-alain's built-in features (ACL, Auth, Cache, etc.)
+
+// 程式碼風格與最佳實踐
+Code Style Guidelines:
+- Use TypeScript strict mode
+- Follow Angular Style Guide
+- Use ng-alain's service patterns (@delon/auth, @delon/acl, @delon/cache)
+- Implement proper error handling with @delon/util
+- Use @delon/form for complex form handling
+- Leverage @delon/abc for common admin components (ST, SE, etc.)
+
+// 自動模式判斷
+Based on task complexity, automatically:
+- Level 1-2: Use basic Angular workflow
+- Level 3-4: Use comprehensive planning with ng-alain architecture
+- Always verify ng-alain module structure before operations
+- Check @delon/* module compatibility
+
+// 開發工具配置
+Development Tools:
+- ESLint: @typescript-eslint/*, angular-eslint
+- Stylelint: for .less files
+- Prettier: for code formatting
+- Husky: for git hooks
+- Lint-staged: for staged file linting
+
+// 建置與部署
+Build Configuration:
+- Use Angular CLI with high memory allocation (--max_old_space_size=8000)
+- Source map analysis with source-map-explorer
+- Theme generation with ng-alain-plugin-theme
+- Icon generation with ng-alain:plugin icon
+
+// 測試策略
+Testing Approach:
+- Unit tests with Jasmine + Karma
+- E2E tests with Protractor
+- Code coverage reporting
+- Mock data with @delon/mock
+
+// 國際化支援
+i18n Support:
+- Multiple language support (zh-CN, en-US, etc.)
+- Use @delon/theme for theme management
+- Support for RTL layouts
+
+// 效能優化
+Performance Optimization:
+- Lazy loading with Angular Router
+- Tree shaking for unused code
+- Bundle analysis with source-map-explorer
+- Memory optimization for large builds
+
+// MCP usage policy (Cursor IDE)
+// Always leverage servers declared in .cursor/mcp.json; do not duplicate settings here.
+// Default platform: Node 22.18.0, Windows PowerShell. Prefer non-interactive flags.
+
+// Filesystem server (@modelcontextprotocol/server-filesystem)
+// - Prefer tools: read_text_file, read_media_file, list_directory, list_directory_with_sizes,
+//   directory_tree, list_allowed_directories, get_file_info, create_directory, write_file,
+//   edit_file, move_file, search_files
+// - Keep changes minimal; never reformat unrelated code; respect existing indentation.
+
+// Playwright server (@playwright/mcp)
+// - Prefer tools for UI automation within docs/tests: navigate_to_url, click_element, fill_input,
+//   type_text, press_key, take_screenshot, hover, select_option, file_upload, evaluate,
+//   wait_for_selector, wait_for_url, go_back, go_forward, scroll_to_element, get_by_text,
+//   get_by_role, get_by_label, get_by_placeholder, get_by_test_id, network_requests, snapshot,
+//   tabs, drag, console_messages, wait_for
+
+// Context7 server (@upstash/context7-mcp)
+// - Always run: resolve-library-id → get-library-docs before using any third‑party API/library.
+// - Ground code strictly on fetched docs; if ambiguous, ask for exact package/version.
+
+// Angular CLI server (@angular/cli mcp)
+// - Mandatory: get_best_practices before any Angular code create/analyze/modify.
+// - Use list_projects, search_documentation for workspace discovery and API lookups.
+
+// Everything server (@modelcontextprotocol/server-everything)
+// - Use only for demos/utilities: echo, add, longRunningOperation, printEnv, getTinyImage,
+//   annotatedMessage, sampleLLM, getResourceReference, startElicitation, structuredContent
+
+// Memory server (@modelcontextprotocol/server-memory)
+// - Use to store/retrieve project knowledge; never store secrets; keep entries concise and accurate.
+
+// GitHub server (ghcr.io/github/github-mcp-server)
+// - Use for repo automation when needed; rely on env token in .cursor/mcp.json; avoid writing secrets.
+
+// package.json workflow (prefer these scripts when building/testing)
+// - build: uses high memory ng build; e2e/test: ng-based; lint: eslint/stylelint; analyze: source maps
+// - When running commands inside Cursor tasks, prefer non-interactive flags and background jobs if long‑running.

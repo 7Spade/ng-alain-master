@@ -1,0 +1,18 @@
+---
+alwaysApply: false
+server: everything
+summary: 示範/教學工具；避免干擾正式流程
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Everything MCP 規則
+
+- 目的：展示/教學用工具、非生產工作流核心。
+- 何時用：僅需範例、echo、示意、或 debug 輔助。
+
+## 推薦用法
+- echo/add/longRunningOperation/printEnv 等示範性操作
+
+## 注意
+- 非必要不使用；避免汙染正式工作流。

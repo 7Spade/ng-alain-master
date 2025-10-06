@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+server: playwright
+summary: 文件導覽/截圖輔助；非正式 E2E 測試替代
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Playwright MCP（頂層入口）
+- 目的：文件瀏覽、自動化互動與截圖輔助。
+- 推薦：navigate_to_url → wait_for → take_screenshot；get_by_* 查詢元素。
+- 注意：僅作輔助，不取代正式 E2E 測試流程。

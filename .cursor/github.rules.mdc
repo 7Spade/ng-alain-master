@@ -1,0 +1,11 @@
+---
+alwaysApply: false
+server: github
+summary: 需授權；PR/Issue/同步；最小變更、可追溯
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# GitHub MCP（頂層入口）
+- 原則：需授權才使用；避免大量寫入與敏感操作。
+- 用法：PR/Issue/內容同步；遵守最小變更與可追溯性。

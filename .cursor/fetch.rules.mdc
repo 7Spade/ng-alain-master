@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+server: fetch
+summary: 補充非官方內容；Context7 優先；遵守 robots
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Fetch MCP（頂層入口）
+- 原則：文件來源以 Context7 優先，fetch 僅作補充。
+- 用法：抓取非官方頁面文字/資源；遵守 robots 規範。

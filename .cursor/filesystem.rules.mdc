@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+server: filesystem
+summary: 改檔優先；最小變更；保留原縮排
+---
+
+[INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
+
+# Filesystem MCP（頂層入口）
+- 目的：檔案系統操作的優先工具；遵循最小變更與原縮排。
+- 推薦：read_text_file、edit_file（小幅）、write_file（新檔/覆寫）、search_files。
+- 注意：避免用 shell 直接改敏感檔；不重排不相關程式碼。
