@@ -27,6 +27,10 @@ export const routes: Routes = [
       { path: 'pro', loadChildren: () => import('./pro/routes').then(m => m.routes) }
     ]
   },
+  // GitHub-style pages
+  { path: 'u', loadChildren: () => import('./user/routes').then(m => m.routes) },
+  { path: 'org', loadChildren: () => import('./organization/routes').then(m => m.routes) },
+  { path: '', loadChildren: () => import('./project/routes').then(m => m.routes) },
   // Blak Layout 空白布局
   {
     path: 'data-v',
