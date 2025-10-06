@@ -1,26 +1,73 @@
 # Tech Context
 
 ## Frameworks
-- Angular: ^20.3.x (strict mode)
-- ng-zorro-antd: ^20.3.1
-- @delon: ^20.0.2 (abc, acl, auth, cache, chart, form, mock, theme, util)
+- **Angular**: ^20.3.0 (standalone components, signals, @if/@for control flow, strict mode)
+- **ng-zorro-antd**: ^20.3.1 (complete UI component library)
+- **@delon**: ^20.0.2 (abc, acl, auth, cache, chart, form, mock, theme, util)
+- **RxJS**: ~7.8.0 (reactive programming)
+- **Zone.js**: ~0.15.0 (change detection)
 
 ## Tooling
-- TypeScript: ~5.9.2 (bundler resolution, ES2022 target/module)
-- ESLint 9 + angular-eslint 20
-- Stylelint 16
-- Jasmine + Karma, Protractor e2e
-- Yarn 4.9.2 (packageManager)
+- **TypeScript**: ~5.9.2 (bundler resolution, ES2022 target/module, strict config)
+- **ESLint**: 9 + angular-eslint 20 + TypeScript rules
+- **Stylelint**: 16 + clean order + standard config
+- **Prettier**: Code formatting with prettier config
+- **Jasmine + Karma**: Unit testing with coverage
+- **Protractor**: E2E testing framework
+- **Yarn**: 4.9.2 (packageManager)
+- **Husky**: Git hooks + lint-staged
 
 ## Runtime Patterns
-- Standalone providers via `app.config.ts` (`provideRouter`, `provideAlain`, `provideAuth`, widgets, startup)
-- Interceptors: `authSimpleInterceptor`, `defaultInterceptor`, mock in dev
-- Hash routing toggled by `environment.useHash`
+- **Standalone Providers**: via `app.config.ts` (`provideRouter`, `provideAlain`, `provideAuth`, widgets, startup)
+- **Interceptors**: `authSimpleInterceptor`, `defaultInterceptor`, mock in dev
+- **Hash Routing**: toggled by `environment.useHash`
+- **Component Architecture**: Standalone components with explicit imports
+- **Change Detection**: OnPush strategy for performance
+- **Service Injection**: inject() function for dependency injection
+
+## Authentication & Authorization
+- **@delon/auth**: Token-based authentication system
+- **Simple Auth**: Username/password flow (admin/123456 demo)
+- **Route Guards**: `authSimpleCanActivate`, `authSimpleCanActivateChild`
+- **Token Management**: DA_SERVICE_TOKEN for user sessions
+- **Anonymous Context**: ALLOW_ANONYMOUS for public endpoints
+- **Reuse Tab**: Route reuse management
 
 ## Environments
-- Dev: mock providers + interceptors enabled
-- Prod: no mock providers; still hash routing; same API baseUrl `'./'`
+- **Development**: mock providers + interceptors enabled, source maps
+- **Production**: no mock providers; hash routing; API baseUrl `'./'`
+- **API Configuration**: refreshTokenEnabled, refreshTokenType 'auth-refresh'
 
-## Builder
-- `@angular/build:application`; polyfills `zone.js`
-- Style preprocessor: Less with includePaths `node_modules/`
+## Builder & Build
+- **@angular/build:application**: New application builder
+- **Polyfills**: zone.js for change detection
+- **Style Preprocessor**: Less with includePaths `node_modules/`
+- **High Memory Build**: --max_old_space_size=8000 for large applications
+- **Bundle Analysis**: Source map generation and exploration
+- **Asset Management**: public/, src/assets, favicon.ico
+
+## State Management
+- **Service-based State**: Component-level state management
+- **Cache Service**: @delon/cache for data caching
+- **Settings Service**: User preferences and app configuration
+- **Startup Service**: App initialization and bootstrap
+- **HTTP Client**: @delon/theme _HttpClient wrapper
+
+## Internationalization
+- **@delon/theme I18N**: Built-in i18n service
+- **Default Language**: zh-CN across Angular, Zorro, Delon, date-fns
+- **I18nPipe**: Template translation pipe
+- **Custom I18NService**: Extended i18n functionality
+
+## Theme & Styling
+- **@delon/theme**: Theme system with default theme
+- **Less Integration**: Custom theme variables support
+- **Component Themes**: ng-zorro theme integration
+- **Responsive Design**: Mobile-first approach
+- **Style Aggregation**: src/styles.less with theme extensions
+
+## Mock & Development
+- **@delon/mock**: Development API simulation
+- **Mock Data**: _mock/ directory with API endpoints
+- **Mock Interceptor**: Automatic mock response handling
+- **Environment-based**: Mock configuration per environment

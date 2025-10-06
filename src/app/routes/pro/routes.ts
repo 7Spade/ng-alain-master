@@ -117,5 +117,9 @@ export const routes: Routes = [
         ]
       }
     ]
+  },
+  {
+    path: 'organization',
+    loadChildren: () => import('./organization/routes').then(m => m.routes)
   }
 ];
