@@ -50,13 +50,6 @@
       "args": ["-y", "@angular/cli", "mcp"],
       "disabled": false,
       "autoApprove": ["get_best_practices","list_projects","search_documentation"]
-    },
-    "github": {
-      "command": "docker",
-      "args": ["run","-i","--rm","-e","GITHUB_PERSONAL_ACCESS_TOKEN","ghcr.io/github/github-mcp-server"],
-      "disabled": false,
-      "autoApprove": ["get_file_contents","search_repositories","get_repository_info","create_file","update_file","delete_file","create_pull_request","get_pull_request","list_pull_requests","merge_pull_request","get_issue","create_issue","list_issues","add_issue_comment","list_commits"],
-      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "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" }
     }
   }
 }
