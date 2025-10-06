@@ -1,0 +1,62 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:/7Spade/ng-alain-master/"],
+      "disabled": false,
+      "autoApprove": ["read_text_file","read_media_file","list_directory","list_directory_with_sizes","directory_tree","list_allowed_directories","get_file_info","create_directory","write_file","edit_file","move_file","search_files"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "disabled": false,
+      "autoApprove": ["navigate_to_url","click_element","fill_input","type_text","press_key","take_screenshot","get_element_text","get_element_attribute","wait_for_selector","wait_for_url","go_back","go_forward","scroll_to_element","get_by_text","get_by_role","get_by_label","get_by_placeholder","get_by_test_id","hover","select_option","file_upload","evaluate","network_requests","snapshot","tabs","drag","console_messages","wait_for"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "env": { "NODE_OPTIONS": "--max-old-space-size=2048" },
+      "disabled": false,
+      "autoApprove": ["resolve-library-id","get-library-docs"]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@kazuph/mcp-fetch"],
+      "disabled": false,
+      "autoApprove": ["fetch_url","fetch_content"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": { "NODE_OPTIONS": "--max-old-space-size=1024" },
+      "disabled": false,
+      "autoApprove": ["sequentialthinking"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": { "MEMORY_FILE_PATH": "D:/7Spade/ng-alain-master/memory-bank/memory.json" },
+      "disabled": false,
+      "autoApprove": ["create_entities","create_relations","add_observations","search_nodes","open_nodes","read_graph","delete_entities","delete_observations","delete_relations"]
+    },
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"],
+      "disabled": false,
+      "autoApprove": ["echo","add","longRunningOperation","printEnv","getTinyImage","annotatedMessage","sampleLLM","getResourceReference","startElicitation","structuredContent"]
+    },
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"],
+      "disabled": false,
+      "autoApprove": ["get_best_practices","list_projects","search_documentation"]
+    },
+    "github": {
+      "command": "docker",
+      "args": ["run","-i","--rm","-e","GITHUB_PERSONAL_ACCESS_TOKEN","ghcr.io/github/github-mcp-server"],
+      "disabled": false,
+      "autoApprove": ["get_file_contents","search_repositories","get_repository_info","create_file","update_file","delete_file","create_pull_request","get_pull_request","list_pull_requests","merge_pull_request","get_issue","create_issue","list_issues","add_issue_comment","list_commits"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "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" }
+    }
+  }
+}
