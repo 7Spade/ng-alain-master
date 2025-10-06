@@ -11,6 +11,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TeamsPage {}
+export class TeamsComponent {}
 
 
