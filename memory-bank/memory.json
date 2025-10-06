@@ -1,2 +1,5 @@
-{"type":"entity","name":"<標題>","entityType":"<類型>","observations":["<重點描述1>","<重點描述2>"]}
-{"type":"relation","from":"<來源>","to":"<目標>","relationType":"<關係>"}
+﻿{"type":"entity","name":"Users & Orgs Feature","entityType":"Feature","observations":["Level 3","GitHub-like profiles & orgs"]}
+{"type":"entity","name":"User","entityType":"Domain","observations":["CRUD","Profile","Follow"]}
+{"type":"entity","name":"Organization","entityType":"Domain","observations":["CRUD","Members","Settings"]}
+{"type":"relation","from":"User","to":"User","relationType":"Follow"}
+{"type":"relation","from":"Organization","to":"User","relationType":"Membership"}
