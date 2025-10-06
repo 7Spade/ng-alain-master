@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { I18nPipe, SettingsService, User } from '@delon/theme';
+import { computed, inject as ngInject } from '@angular/core';
+import { AppContextStore } from '../../shared/context/context.store';
 import { LayoutDefaultModule, LayoutDefaultOptions } from '@delon/theme/layout-default';
 import { SettingDrawerModule } from '@delon/theme/setting-drawer';
 import { ThemeBtnComponent } from '@delon/theme/theme-btn';
@@ -123,12 +125,15 @@ import { HeaderUserComponent } from './widgets/user.component';
 })
 export class LayoutBasicComponent {
   private readonly settings = inject(SettingsService);
+  private readonly ctx = ngInject(AppContextStore);
   options: LayoutDefaultOptions = {
     logoExpanded: `./assets/logo-full.svg`,
     logoCollapsed: `./assets/logo.svg`
   };
   searchToggleStatus = false;
   showSettingDrawer = !environment.production;
+  readonly contextType = this.ctx.contextType;
+  readonly contextSlug = this.ctx.slug;
   get user(): User {
     return this.settings.user;
   }
