@@ -72,9 +72,7 @@ export class HeaderUserComponent {
   }
 
   // TODO: replace with actual current org context selector
-  get defaultOrgSlug(): string {
-    return 'demo-org';
-  }
+  readonly defaultOrgSlug = 'demo-org';
 
   logout(): void {
     this.tokenService.clear();

@@ -30,6 +30,9 @@ export const routes: Routes = [
       { path: 'org', loadChildren: () => import('./org/org.routes').then(m => m.routes) }
     ]
   },
+  // GitHub-style alias routes: /:owner and /:owner/:projectSlug
+  { path: ':owner', loadChildren: () => import('./alias/alias.routes').then(m => m.routes) },
+  { path: ':owner/:projectSlug', loadChildren: () => import('./alias/alias.routes').then(m => m.routes) },
   // Blak Layout 空白布局
   {
     path: 'data-v',
