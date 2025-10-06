@@ -16,24 +16,6 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     </div>
     <nz-dropdown-menu #userMenu="nzDropdownMenu">
       <div nz-menu class="width-sm">
-        <div nz-menu-item [routerLink]="['/', userSlug]">
-          <i nz-icon nzType="user" class="mr-sm"></i>
-          Your profile
-        </div>
-        <div nz-menu-item [routerLink]="['/', userSlug, 'projects']">
-          <i nz-icon nzType="folder" class="mr-sm"></i>
-          Your projects
-        </div>
-        <li nz-menu-divider></li>
-        <div nz-menu-item [routerLink]="['/', userSlug, 'organizations']">
-          <i nz-icon nzType="team" class="mr-sm"></i>
-          Your organizations
-        </div>
-        <div nz-menu-item [routerLink]="['/', defaultOrgSlug]">
-          <i nz-icon nzType="cluster" class="mr-sm"></i>
-          Switch to org: {{ defaultOrgSlug }}
-        </div>
-        <li nz-menu-divider></li>
         <div nz-menu-item routerLink="/pro/account/center">
           <i nz-icon nzType="user" class="mr-sm"></i>
           {{ 'menu.account.center' | i18n }}
@@ -64,15 +46,6 @@ export class HeaderUserComponent {
   get user(): User {
     return this.settings.user;
   }
-
-  get userSlug(): string {
-    // naive slug derivation from name or username
-    const name = (this.user?.name || '').trim();
-    return name.toLowerCase().replace(/\s+/g, '-');
-  }
-
-  // TODO: replace with actual current org context selector
-  readonly defaultOrgSlug = 'demo-org';
 
   logout(): void {
     this.tokenService.clear();
