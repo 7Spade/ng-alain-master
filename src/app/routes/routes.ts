@@ -24,7 +24,10 @@ export const routes: Routes = [
       { path: 'style', loadChildren: () => import('./style/routes').then(m => m.routes) },
       { path: 'delon', loadChildren: () => import('./delon/routes').then(m => m.routes) },
       { path: 'extras', loadChildren: () => import('./extras/routes').then(m => m.routes) },
-      { path: 'pro', loadChildren: () => import('./pro/routes').then(m => m.routes) }
+      { path: 'pro', loadChildren: () => import('./pro/routes').then(m => m.routes) },
+      // User & Organization unified entrypoints
+      { path: 'u', loadChildren: () => import('./user/user.routes').then(m => m.routes) },
+      { path: 'org', loadChildren: () => import('./org/org.routes').then(m => m.routes) }
     ]
   },
   // Blak Layout 空白布局
