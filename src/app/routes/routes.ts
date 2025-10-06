@@ -12,7 +12,11 @@ export const routes: Routes = [
     canActivateChild: [authSimpleCanActivateChild],
     data: {},
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: 'landing', pathMatch: 'full' },
+      {
+        path: 'landing',
+        loadChildren: () => import('./landing/routes').then(m => m.routes)
+      },
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboard/routes').then(m => m.routes)
