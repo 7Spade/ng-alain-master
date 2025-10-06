@@ -37,7 +37,10 @@
     "color-less": "ng-alain-plugin-theme -t=colorLess",
     "theme": "ng-alain-plugin-theme -t=themeCss",
     "icon": "ng g ng-alain:plugin icon",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "structure:generate": "npx tsx scripts/generate-tree.ts",
+    "structure:check": "npm run structure:generate && echo '✅ ng-alain 結構驗證完成'"
+
   },
   "dependencies": {
     "@angular/animations": "^20.3.0",
