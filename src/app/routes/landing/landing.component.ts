@@ -8,11 +8,11 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
   imports: [NzButtonModule],
   template: `
     <div style="display:flex;min-height:60vh;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:16px;">
-      <h1 style="margin:0;">Welcome to ng-alain</h1>
+      <h1 style="margin:0;">歡迎使用 ng-alain</h1>
       <p style="max-width:680px;opacity:.75;">
-        Enterprise admin starter built on Angular and ng-zorro-antd. Click Start to sign in and explore the dashboard.
+        基於 Angular 和 ng-zorro-antd 構建的企業級管理後台系統。點擊下方按鈕開始登入並探索儀表板。
       </p>
-      <button nz-button nzType="primary" (click)="start()">Start</button>
+      <button nz-button nzType="primary" nzSize="large" (click)="start()">開始登入</button>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
