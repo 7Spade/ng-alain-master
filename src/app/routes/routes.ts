@@ -25,9 +25,7 @@ export const routes: Routes = [
       { path: 'delon', loadChildren: () => import('./delon/routes').then(m => m.routes) },
       { path: 'extras', loadChildren: () => import('./extras/routes').then(m => m.routes) },
       { path: 'pro', loadChildren: () => import('./pro/routes').then(m => m.routes) },
-      // User & Organization unified entrypoints
-      { path: 'u', loadChildren: () => import('./user/user.routes').then(m => m.routes) },
-      { path: 'org', loadChildren: () => import('./org/org.routes').then(m => m.routes) }
+      // Removed legacy /u and /org entries; use owner/repo aliases below
     ]
   },
   // GitHub-style alias routes: /:owner and /:owner/:projectSlug

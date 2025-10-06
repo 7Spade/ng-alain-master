@@ -16,20 +16,20 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     </div>
     <nz-dropdown-menu #userMenu="nzDropdownMenu">
       <div nz-menu class="width-sm">
-        <div nz-menu-item [routerLink]="['/u', userSlug, 'profile']">
+        <div nz-menu-item [routerLink]="['/', userSlug]">
           <i nz-icon nzType="user" class="mr-sm"></i>
           Your profile
         </div>
-        <div nz-menu-item [routerLink]="['/u', userSlug, 'projects']">
+        <div nz-menu-item [routerLink]="['/', userSlug, 'projects']">
           <i nz-icon nzType="folder" class="mr-sm"></i>
           Your projects
         </div>
         <li nz-menu-divider></li>
-        <div nz-menu-item [routerLink]="['/u', userSlug, 'organizations']">
+        <div nz-menu-item [routerLink]="['/', userSlug, 'organizations']">
           <i nz-icon nzType="team" class="mr-sm"></i>
           Your organizations
         </div>
-        <div nz-menu-item [routerLink]="['/org', defaultOrgSlug, 'overview']">
+        <div nz-menu-item [routerLink]="['/', defaultOrgSlug]">
           <i nz-icon nzType="cluster" class="mr-sm"></i>
           Switch to org: {{ defaultOrgSlug }}
         </div>
