@@ -27,13 +27,10 @@ src/app/routes/pro/organization/
 │   ├── org-settings/                   # 組織設定
 │   ├── org-invitations/                # 邀請管理
 │   └── org-structure/                  # 組織架構
-├── shared/                             # 共用組件
-│   ├── avatar.component.ts             # 頭像組件
-│   ├── entity-tag.component.ts         # 實體標籤組件
-│   └── member-list.component.ts        # 成員列表組件
-└── mock/                               # 假資料
-    ├── user.mock.ts                    # 用戶假資料
-    └── organization.mock.ts            # 組織假資料
+└── shared/                             # 共用組件
+    ├── avatar.component.ts             # 頭像組件
+    ├── entity-tag.component.ts         # 實體標籤組件
+    └── member-list.component.ts        # 成員列表組件
 ```
 
 ## 🚀 功能特性
@@ -76,6 +73,37 @@ src/app/routes/pro/organization/
 - `orgAdminGuard`: 管理員和擁有者可以訪問
 - `orgMemberGuard`: 所有成員都可以訪問
 
+## 🗂️ Mock 資料
+
+組織管理功能的 Mock 資料已整合到項目根目錄的 `_mock/` 目錄中：
+
+- `_mock/_organization.ts` - 組織相關的所有 API endpoints
+- `_mock/_org-user.ts` - 用戶相關的所有 API endpoints
+
+這些 Mock 資料會在開發環境中自動生效，提供以下 API：
+
+**組織 API**:
+- `GET /api/organizations` - 獲取組織列表（支援分頁、篩選）
+- `GET /api/organizations/:id` - 獲取單個組織
+- `POST /api/organizations` - 創建組織
+- `PUT /api/organizations/:id` - 更新組織
+- `DELETE /api/organizations/:id` - 刪除組織
+- `GET /api/organizations/:id/stats` - 獲取組織統計
+- `GET /api/organizations/check-name` - 檢查名稱可用性
+- `GET /api/organizations/public/:name` - 獲取公開組織資訊
+
+**用戶 API**:
+- `GET /api/users` - 獲取用戶列表（支援分頁、篩選）
+- `GET /api/users/:id` - 獲取單個用戶
+- `POST /api/users` - 創建用戶
+- `PUT /api/users/:id` - 更新用戶
+- `DELETE /api/users/:id` - 刪除用戶
+- `GET /api/users/:id/followers` - 獲取關注者
+- `GET /api/users/:id/following` - 獲取關注列表
+- `POST /api/users/:id/follow` - 關注用戶
+- `DELETE /api/users/:id/follow` - 取消關注
+- `GET /api/users/:id/organizations` - 獲取用戶的組織列表
+
 ## 🛠️ 開發指南
 
 ### 添加新功能
@@ -84,6 +112,7 @@ src/app/routes/pro/organization/
 3. 在 `components/` 中創建 UI 組件
 4. 在 `routes.ts` 中配置路由
 5. 在 `guards/` 中添加權限控制
+6. 如需新增 Mock API，請在 `_mock/` 目錄中添加對應的處理函數
 
 ### 使用組件
 ```typescript
