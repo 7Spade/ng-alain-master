@@ -1,11 +1,11 @@
 ---
 alwaysApply: true
 server: context7
-summary: 第三方前先 resolve-library-id → get-library-docs，以官方文件為準
+summary: 僅在涉及第三方庫/API 時先 resolve-library-id → get-library-docs（一般任務不強制）
 ---
 
 [INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
 
 # Context7 MCP（頂層入口）
-- 強制：resolve-library-id → get-library-docs 先於任何第三方代碼。
+- 建議：當涉及第三方代碼時，先 resolve-library-id → get-library-docs；一般任務不強制。
 - 策略：文件為準產碼；版本不明先詢問；避免臆測。

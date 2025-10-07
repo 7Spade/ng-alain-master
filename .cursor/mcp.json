@@ -4,13 +4,13 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:/7Spade/ng-alain-master/"],
       "disabled": false,
-      "autoApprove": ["read_text_file","read_media_file","list_directory","list_directory_with_sizes","directory_tree","list_allowed_directories","get_file_info","create_directory","write_file","edit_file","move_file","search_files"]
+      "autoApprove": ["read_text_file","read_media_file","list_directory","list_directory_with_sizes","directory_tree","list_allowed_directories","get_file_info","search_files"]
     },
     "playwright": {
       "command": "npx",
       "args": ["-y", "@playwright/mcp"],
       "disabled": false,
-      "autoApprove": ["navigate_to_url","click_element","fill_input","type_text","press_key","take_screenshot","get_element_text","get_element_attribute","wait_for_selector","wait_for_url","go_back","go_forward","scroll_to_element","get_by_text","get_by_role","get_by_label","get_by_placeholder","get_by_test_id","hover","select_option","file_upload","evaluate","network_requests","snapshot","tabs","drag","console_messages","wait_for"]
+      "autoApprove": ["navigate_to_url","take_screenshot","snapshot","wait_for"]
     },
     "context7": {
       "command": "npx",
@@ -37,7 +37,7 @@
       "args": ["-y", "@modelcontextprotocol/server-memory"],
       "env": { "MEMORY_FILE_PATH": "D:/7Spade/ng-alain-master/memory-bank/memory.json" },
       "disabled": false,
-      "autoApprove": ["create_entities","create_relations","add_observations","search_nodes","open_nodes","read_graph","delete_entities","delete_observations","delete_relations"]
+      "autoApprove": ["read_graph"]
     },
     "everything": {
       "command": "npx",

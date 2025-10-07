@@ -1,11 +1,11 @@
 ---
 alwaysApply: true
 server: angular-cli
-summary: 任何 Angular 建立/修改/分析前先 get_best_practices
+summary: Angular 任務前優先 get_best_practices（非 Angular 任務不強制）
 ---
 
 [INDEX](./rules/INDEX.mdc) · Angular-CLI · Context7 · Filesystem · Fetch · GitHub · SeqThinking · Playwright · Memory · Everything
 
 # Angular CLI MCP（頂層入口）
-- 強制：任何 Angular 代碼建立/修改/分析前先 get_best_practices。
+- 建議：Angular 代碼建立/修改/分析前先 get_best_practices；非 Angular 任務不強制。
 - 用法：get_best_practices → search_documentation(query) → list_projects（視需要）。

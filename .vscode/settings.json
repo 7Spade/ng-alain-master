@@ -35,5 +35,7 @@
     "*.json": "jsonc",
     ".prettierrc": "jsonc"
   },
-  "typescript.referencesCodeLens.enabled": true
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.tsserver.nodePath": "C:/nvm4w/nodejs/node.exe"
 }
